@@ -34,7 +34,7 @@ decoration {
     rounding = 6
     shadow:enabled = false
     dim_inactive = true
-    dim_strength = 0.075
+    dim_strength = 0.025
 
     blur {
         enabled = yes

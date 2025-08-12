@@ -15,7 +15,7 @@ exec = gsettings set org.gnome.desktop.interface color-scheme $COLOR_SCHEME
 general {
     gaps_in = 0
     gaps_out = 0
-    border_size = 0
+    border_size = 1
     col.active_border = rgba(ca9ee6ff) rgba(f2d5cfff) 45deg
     col.inactive_border = rgba(000000ff) rgba(000000ff) 45deg
     layout = dwindle
@@ -31,24 +31,22 @@ group {
 }
 
 decoration {
-    rounding = 6
-    shadow:enabled = false
+    rounding = 0
     dim_inactive = false
-    blur:enabled = 1
-    active_opacity = 1 
-    inactive_opacity = 1 
-    fullscreen_opacity = 1 
-    fullscreen_opacity = 1 
+    active_opacity = 1
+    inactive_opacity = 1
+    fullscreen_opacity = 1
 
+    shadow {        
+        enabled = 0
+    }
     blur {
-        enabled = yes
-        size = 6
-        passes = 4
-        new_optimizations = on
-        ignore_opacity = on
-        xray = false
+        enabled = 0
+        xray = 1
     }
 }
+
+animations:enabled = 0
 
 windowrule = opaque,class:(.*) # ensure all windows are opaque
 
@@ -56,3 +54,7 @@ layerrule = blur,waybar
 layerrule = blur,dunst
 layerrule = blur,swaync-notification-window 
 layerrule = blur,rofi
+layerrule = noanim,waybar 
+layerrule = noanim,swaync-notification-window 
+layerrule = noanim,swww-daemon 
+layerrule = noanim,rofi

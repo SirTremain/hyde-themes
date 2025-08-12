@@ -50,6 +50,8 @@ decoration {
     }
 }
 
+windowrule = opaque,class:(.*) # ensure all windows are opaque
+
 layerrule = blur,waybar 
 layerrule = blur,dunst
 layerrule = blur,swaync-notification-window 

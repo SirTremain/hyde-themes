@@ -33,8 +33,7 @@ group {
 decoration {
     rounding = 6
     shadow:enabled = false
-    dim_inactive = true
-    dim_strength = 0.025
+    dim_inactive = false
 
     blur {
         enabled = yes

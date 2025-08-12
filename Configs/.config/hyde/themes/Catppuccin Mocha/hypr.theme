@@ -16,7 +16,6 @@ general {
     gaps_in = 0
     gaps_out = 0
     border_size = 0
-    inactive_opacity = 1
     col.active_border = rgba(ca9ee6ff) rgba(f2d5cfff) 45deg
     col.inactive_border = rgba(000000ff) rgba(000000ff) 45deg
     layout = dwindle
@@ -35,6 +34,11 @@ decoration {
     rounding = 6
     shadow:enabled = false
     dim_inactive = false
+    blur:enabled = 1
+    active_opacity = 1 
+    inactive_opacity = 1 
+    fullscreen_opacity = 1 
+    fullscreen_opacity = 1 
 
     blur {
         enabled = yes
@@ -46,4 +50,7 @@ decoration {
     }
 }
 
-layerrule = blur,waybar
+layerrule = blur,waybar 
+layerrule = blur,dunst
+layerrule = blur,swaync-notification-window 
+layerrule = blur,rofi
